@@ -1,5 +1,6 @@
 #include<iostream>
 #include"Windows.h"
+#define tab "\t" 
 
 class ForwardList;
 class Element
@@ -83,7 +84,14 @@ class ForwardList
 	Element* Head;
 	unsigned int size;
 public:
-
+	Iterator begin()
+	{
+		return Head;
+	}
+	Iterator end()
+	{
+		return nullptr;
+	}
 	Element* getHead()const { return Head; }
 	unsigned int get_size()const { return size; }
 	ForwardList()
@@ -279,7 +287,7 @@ public:
 		}
 	}
 	
-	ForwardList& revers(const ForwardList& other)
+	/*ForwardList& revers(const ForwardList& other)
 	{
 		Element* Temp = Head;
 		
@@ -289,7 +297,55 @@ public:
 		Temp = Temp->pNext;		
 		}
 		return *this;
+	}*/
+	void revers()
+	{
+		ForwardList reverse_list;
+		while (Head)
+		{
+			reverse_list.push_front(Head->Data);
+			pop_front();
+		}
+		Head = reverse_list.Head;
+		reverse_list.Head = nullptr;
 	}
+	/*void unique()
+	{
+		for (Element* Temp = Head; Temp->pNext; Temp = Temp->pNext)
+		{
+			for (Element* Temp2 = Temp; Temp2->pNext; Temp2 = Temp2->pNext)
+			{
+				if (Temp->Data == Temp2->pNext->Data)
+				{
+					Element* Erased = Temp2->pNext;
+					Temp2->pNext = Temp2->pNext->pNext;
+					delete Erased;
+					size--;
+					Temp2 = Temp;
+				}
+			}
+		}
+		
+	}*/
+	//void unique()
+	//{
+	//	for (Element* Temp = Head; Temp->pNext; Temp = Temp->pNext)
+	//	{
+	//		for (Element* Temp2 = Head; Temp2->pNext; Temp2 = Temp2->pNext)
+	//		{
+	//			if (Temp == Temp2)continue;
+	//			if (Temp->Data == Temp2->pNext->Data)
+	//			{
+	//				Element* Erased = Temp2->pNext;
+	//				Temp2->pNext = Temp2->pNext->pNext;
+	//				delete Erased;
+	//				//Temp2 = Temp;
+	//				size--;
+	//			}
+	//		}
+	//	}
+	//	
+	//}
 };
 ForwardList operator+(const ForwardList& left, const ForwardList& rigth)
 {
@@ -308,6 +364,9 @@ std::ostream& operator<<(std::ostream& os, const Element& obj)
 //#define BASE_CHECK
 //#define COPY_METHODS_CHECK
 //#define MOVE_METHODS_CHECK
+//#define UNIGUE_METHODS_CHECK
+//#define REVERS_METHODS_CHECK
+//#define RANG_BASE_FOR_ARRAY
 void main()
 {
 	/*HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -374,18 +433,55 @@ void main()
 	std::cout << std::endl;
 #endif // MOVE_METHODS_CHECK
 
+
+#ifdef UNIGUE_METHODS_CHECK
+	int n;
+	std::cout << "Enter size: "; std::cin >> n;
+	ForwardList list;
+	for (int i = 0; i < n; i++)
+	{
+		list.push_back(rand() % 10);
+	}
+	list.print();
+	list.unique();
+	list.print();
+#endif // UNIGUE_METHODS_CHECK
+
+#ifdef REVERS_METHODS_CHECK
 	ForwardList list = { 3, 5, 8, 13, 21 };
-	
+
 	list.print();
-	list = list.revers(list);
+	std::cout << "\n---------------------------------\n" << std::endl;;
+	list.revers();
 	list.print();
+#endif // REVERS_METHODS_CHECK
+
 	/*for (Iterator it = list.getHead(); it != nullptr; it++)
 	{
 		std::cout << *it << "\t";
 	}
 	std::cout << std::endl;*/
-	
-	
+#ifdef RANG_BASE_FOR_ARRAY
+	int arr[] = { 3, 5, 8, 13, 21 };
+	for (int i = 0; i < sizeof(arr) / sizeof(int); i++)
+	{
+		std::cout << arr[i] << tab;
+	}
+	std::cout << std::endl;
+
+	for (int i : arr)
+	{
+		std::cout << i << tab;
+	}
+	std::wcout << std::endl;
+#endif // RANG_BASE_FOR_ARRAY
+
+	ForwardList list = { 3, 5, 8, 13, 21 };
+	for (int i : list)
+	{
+		std::cout << i << tab;
+	}
+	std::cout << std::endl;
 
 
 }
