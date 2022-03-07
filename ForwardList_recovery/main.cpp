@@ -366,7 +366,7 @@ std::ostream& operator<<(std::ostream& os, const Element& obj)
 //#define COPY_METHODS_CHECK
 //#define MOVE_METHODS_CHECK
 //#define UNIGUE_METHODS_CHECK
-#define REVERS_METHODS_CHECK
+//#define REVERS_METHODS_CHECK
 //#define RANG_BASE_FOR_ARRAY
 void main()
 {
@@ -477,12 +477,10 @@ void main()
 	std::wcout << std::endl;
 #endif // RANG_BASE_FOR_ARRAY
 
-	/*ForwardList list = { 3, 5, 8, 13, 21 };
+	ForwardList list = { 3, 5, 8, 13, 21 };
 	for (int i : list)
 	{
 		std::cout << i << tab;
 	}
-	std::cout << std::endl;*/
-
-
+	std::cout << std::endl;
 }
