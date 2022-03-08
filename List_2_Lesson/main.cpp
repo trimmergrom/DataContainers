@@ -173,7 +173,7 @@ public:
 };
 
 //#define BASE_CHECK
-//#define COPY_METHODS_CHECK
+#define COPY_METHODS_CHECK
 //#define HOME_WORK
 
 void main()
