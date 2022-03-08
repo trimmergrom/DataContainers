@@ -22,8 +22,49 @@ class List
 			std::cout << "EDestructor:\t" << this << std::endl;
 		}
 		friend class List;
+		friend class Iterator;
 	}*Head, *Tail;
 	size_t size;
+	class Iterator
+	{
+		Element* Temp;
+	public:
+		Iterator(Element* Temp) :Temp(Temp)
+		{
+			std::cout << "ItConstructor:\t" << this << std::endl;
+		}
+		~Iterator()
+		{
+			std::cout << "ItDestructor:\t" << this << std::endl;
+		}
+		Iterator& operator++()//prefix
+		{
+			Temp = Temp->pNext;
+			return *this;
+		}
+		Iterator& operator++(int)//postfix
+		{
+			Iterator old = *this;
+			Temp = Temp->pNext;
+			return old;
+		}
+		bool operator==(const Iterator& other)const
+		{
+			return this->Temp == other.Temp;
+		}
+		bool operator!=(const Iterator& other)const
+		{
+			return this->Temp != other.Temp;
+		}
+		const int& operator*()const
+		{
+			return Temp->Data;
+		}
+		int& operator*()
+		{
+			return Temp->Data;
+		}
+	};
 public:
 	List()
 	{
@@ -171,6 +212,7 @@ public:
 		size--;
 	}
 	};
+	
 //#define BASE_CHECK
 //#define COPY_METHODS_CHECK
 #define HOME_WORK
@@ -218,12 +260,12 @@ int main()
 	list2.revers_print();
 #endif // COPY_METHODS_CHECK
 #ifdef HOME_WORK
-	List list = { 3, 5, 8, 13, 21 };
+	/*List list = { 3, 5, 8, 13, 21 };
 	for (int i : list)
 	{
 		std::cout << i << tab;
 	}
-	std::cout << std::endl;
+	std::cout << std::endl;*/
 #endif // HOME_WORK
 
 
