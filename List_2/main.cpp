@@ -66,6 +66,16 @@ class List
 		}
 	};
 public:
+	Iterator begin()
+	{
+		return Head;
+	}
+	Iterator end()
+	{
+		return nullptr;
+	}
+	/*Element* getHead()const { return Head; }
+	unsigned int get_size()const { return size; }*/
 	List()
 	{
 		Head = Tail = nullptr;
@@ -260,12 +270,12 @@ int main()
 	list2.revers_print();
 #endif // COPY_METHODS_CHECK
 #ifdef HOME_WORK
-	/*List list = { 3, 5, 8, 13, 21 };
+	List list = { 3, 5, 8, 13, 21 };
 	for (int i : list)
 	{
 		std::cout << i << tab;
 	}
-	std::cout << std::endl;*/
+	std::cout << std::endl;
 #endif // HOME_WORK
 
 
