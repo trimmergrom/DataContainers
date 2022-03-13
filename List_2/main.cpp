@@ -317,6 +317,7 @@ public:
 	{
 		for (List::Iterator it = list.begin(); it != list.end(); it++)
 		{
+			*it *= 10;
 			std::cout << *it << tab;
 		}
 		std::cout << std::endl;
