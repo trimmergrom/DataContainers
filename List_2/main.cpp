@@ -1,5 +1,5 @@
-#include"List_2.h"	
-#include"List_2.cpp"
+#include"List.h"	
+#include"List.cpp"
 	
 //#define BASE_CHECK
 //#define COPY_METHODS_CHECK
