@@ -263,10 +263,12 @@ void main()
 
 	Tree itree = { 33, 1, 16, 48, 54, 22, 15, 80 };//IT_Constructor
 	itree.print();
-	std::cout << "find: " << itree.find(1) << std::endl;
-	itree.erase(1);
+	int fnd;
+	std::cout << "Enter finded == erased number: "; std::cin >> fnd;
+	std::cout << "find: " << itree.find(fnd) << std::endl;
+	itree.erase(fnd);
 	itree.print();
-	std::cout << "find: " << itree.find(1) << std::endl;
+	std::cout << "find: " << itree.find(fnd) << std::endl;
 
 	Tree ctree = itree;
 	ctree.print();
