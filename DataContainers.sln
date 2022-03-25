@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataContainers", "DataContainers\DataContainers.vcxproj", "{53A912DF-206D-40F7-9E65-0E4CD35DFC44}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ForvardList", "ForvardList\ForvardList.vcxproj", "{136668BB-D852-478B-ABFE-060B41A9024A}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "List_2", "List_2\List_2.vcxproj", "{1387E932-EDE2-4CB9-B1B4-9CAA27AC6379}"
@@ -15,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinaryTree", "BinaryTree\Bi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Recursion", "Recursion\Recursion.vcxproj", "{1530A5B9-DD57-41E6-8CE3-F6F02F54A551}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinaryTree_Home_Work", "BinaryTree_Home_Work\BinaryTree_Home_Work.vcxproj", "{11A94733-685D-4FAA-9E69-1574B850F459}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -23,14 +23,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{53A912DF-206D-40F7-9E65-0E4CD35DFC44}.Debug|x64.ActiveCfg = Debug|x64
-		{53A912DF-206D-40F7-9E65-0E4CD35DFC44}.Debug|x64.Build.0 = Debug|x64
-		{53A912DF-206D-40F7-9E65-0E4CD35DFC44}.Debug|x86.ActiveCfg = Debug|Win32
-		{53A912DF-206D-40F7-9E65-0E4CD35DFC44}.Debug|x86.Build.0 = Debug|Win32
-		{53A912DF-206D-40F7-9E65-0E4CD35DFC44}.Release|x64.ActiveCfg = Release|x64
-		{53A912DF-206D-40F7-9E65-0E4CD35DFC44}.Release|x64.Build.0 = Release|x64
-		{53A912DF-206D-40F7-9E65-0E4CD35DFC44}.Release|x86.ActiveCfg = Release|Win32
-		{53A912DF-206D-40F7-9E65-0E4CD35DFC44}.Release|x86.Build.0 = Release|Win32
 		{136668BB-D852-478B-ABFE-060B41A9024A}.Debug|x64.ActiveCfg = Debug|x64
 		{136668BB-D852-478B-ABFE-060B41A9024A}.Debug|x64.Build.0 = Debug|x64
 		{136668BB-D852-478B-ABFE-060B41A9024A}.Debug|x86.ActiveCfg = Debug|Win32
@@ -71,6 +63,14 @@ Global
 		{1530A5B9-DD57-41E6-8CE3-F6F02F54A551}.Release|x64.Build.0 = Release|x64
 		{1530A5B9-DD57-41E6-8CE3-F6F02F54A551}.Release|x86.ActiveCfg = Release|Win32
 		{1530A5B9-DD57-41E6-8CE3-F6F02F54A551}.Release|x86.Build.0 = Release|Win32
+		{11A94733-685D-4FAA-9E69-1574B850F459}.Debug|x64.ActiveCfg = Debug|x64
+		{11A94733-685D-4FAA-9E69-1574B850F459}.Debug|x64.Build.0 = Debug|x64
+		{11A94733-685D-4FAA-9E69-1574B850F459}.Debug|x86.ActiveCfg = Debug|Win32
+		{11A94733-685D-4FAA-9E69-1574B850F459}.Debug|x86.Build.0 = Debug|Win32
+		{11A94733-685D-4FAA-9E69-1574B850F459}.Release|x64.ActiveCfg = Release|x64
+		{11A94733-685D-4FAA-9E69-1574B850F459}.Release|x64.Build.0 = Release|x64
+		{11A94733-685D-4FAA-9E69-1574B850F459}.Release|x86.ActiveCfg = Release|Win32
+		{11A94733-685D-4FAA-9E69-1574B850F459}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
