@@ -106,7 +106,7 @@ public:
 		Element* rcnd = del->pRigth;
 		while (rcnd)rcnd = rcnd->pLeft;
 		int rcnd_value = rcnd->Data;
-		erase(rcnd_value);
+		erase(rcnd->Data);
 		del->Data = rcnd_value;
 	}
 	int minValue()const
@@ -263,10 +263,10 @@ void main()
 
 	Tree itree = { 33, 1, 16, 48, 54, 22, 15, 80 };//IT_Constructor
 	itree.print();
-	std::cout << "find: " << itree.find(15) << std::endl;
-	itree.erase(15);
+	std::cout << "find: " << itree.find(1) << std::endl;
+	itree.erase(1);
 	itree.print();
-	std::cout << "find: " << itree.find(15) << std::endl;
+	std::cout << "find: " << itree.find(1) << std::endl;
 
 	Tree ctree = itree;
 	ctree.print();
